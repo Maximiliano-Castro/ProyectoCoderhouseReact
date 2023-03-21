@@ -8,13 +8,12 @@ export const Carrito = () => {
     const [total] = value.total;
 
 
+    const show1 = menu ? "carritos show" : "carritos";
+    const show2 = menu ? "carrito show" : "carrito";
+
     const toogleflase = ()=>{
         setMenu(false);
     }
-
-
-    const show1 = menu ? "carritos show" : "carritos";
-    const show2 = menu ? "carrito show" : "carrito";
 
     const resta = id =>{
 		carrito.forEach(item =>{
@@ -61,7 +60,8 @@ export const Carrito = () => {
                 <div className="carrito__center">
                 {
 
-                    carrito.lenght === 0 ? <h2 style={{
+                    carrito.length === 0 ?
+                    <h2 style={{
                         textAlign: "center", fontSize: "3rem"
                     }}>Carrito Vacio</h2> : <>
                     
@@ -91,4 +91,4 @@ export const Carrito = () => {
             </div>
         </div>
     )
-}
+} 
